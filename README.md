@@ -1,4 +1,6 @@
 # hykom
+English | [Korean](/README_KOR.md)
+
 A Korean morpheme analyzer.
 
 hykom is a Korean Morpheme analyzer based on BiLSTM architecture. It can parse the morpheme of Korean sentences and correct the spacing at the same time. We also used the tagging method referring from khaiii of Kakao.
@@ -16,7 +18,7 @@ conda install pytorch=0.4.1 cuda92 -c pytorch
 ### Inference Demo
 First, please download our pretrained model.
 https://drive.google.com/open?id=1uJkbM3vT0kURxzIV7x8VHDkn9USkv2Ou
-And put the model.state and optim.state in /logdir/corpus.cut2.sdo0.0.emb100.lr0.001.lrd0.6.bs250
+And put the `model.state` and `optim.state` in `/logdir/corpus.cut2.sdo0.0.emb100.lr0.001.lrd0.6.bs250`
 
 And then export the python path.
 ```
@@ -89,7 +91,7 @@ And then run this code to get the corpus.txt for training.
 python map_char_to_tag.py -c corpus --output corpus.txt --restore-dic restore.dic
 ```
 -c corpus is the sejong corpus directory. At the same time we got the restore.dic to restore morpheme. 
-Put the restore.dic under ./rsc directory (not necessary, cause I've done it for you ^^).
+Put the `restore.dic` under `./rsc` directory (not necessary, cause I've done it for you ^^).
 
 corpus.txt has this format, It has the morphemes for every word (actually it's called 어절 in Korean, 
 which means a unit):
