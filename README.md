@@ -17,6 +17,7 @@ conda install pytorch=0.4.1 cuda92 -c pytorch
 First, please download our pretrained model.
 https://drive.google.com/open?id=1uJkbM3vT0kURxzIV7x8VHDkn9USkv2Ou
 And put the model.state and optim.state in /logdir/corpus.cut2.sdo0.0.emb100.lr0.001.lrd0.6.bs250
+
 And then export the python path.
 ```
 export PYTHONPATH=/path/to/hykom/src
