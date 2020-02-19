@@ -1,5 +1,6 @@
 # hykom
-A Korean morpheme analyzer
+A Korean morpheme analyzer.
+
 hykom is a Korean Morpheme analyzer based on BiLSTM architecture. It can parse the morpheme of Korean sentences and correct the spacing at the same time. We also used the tagging method referring from khaiii of Kakao.
 ## Usage
 ### Requirement
