@@ -1,5 +1,6 @@
 # hykom
-## 소개
+[English](/README.md) | Korean
+
 khaiii의 태깅 방법을 활용해서 BiLSTM 기반으로 개발한 띄어쓰기 자동 수정 기능이 있는 형태소분석기입니다.
 ## 실행방법
 ### 필요한 패키지
