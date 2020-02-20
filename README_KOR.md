@@ -107,6 +107,7 @@ python map_char_to_tag.py -c corpus --output corpus.txt --restore-dic restore.di
 디자이너로    I-NNG I-NNG I-NNG I-NNG I-JKB
 나섰다.    I-VV I-VV:I-EP:0 I-EF I-SF
 ```
+원형복원 사전은 (restore.dic) 아래 형식과 같습니다:
 ```
 혀/I-VV:I-EC:0    히/I-VV 어/I-EC
 혀/I-VV:I-EC:1    히/I-VV 여/I-EC
@@ -123,9 +124,12 @@ python map_char_to_tag.py -c corpus --output corpus.txt --restore-dic restore.di
 ```
 ## Training
 ### 준비
+위 내용을 참고해서 corpus.txt 파일을 root 경로에 놓으세요.
+그리고 이 코토를 실행해서 train/dev/test dataset을 분리합니다.
 ```
 python split_corpus.py --input corpus.txt -o corpus
 ```
+vocab파일을 만듭니다.
 ```
 python make_vocab.py --input corpus.train
 ```
@@ -156,14 +160,18 @@ B-JKB:I-JKG:0
 B-JKB:I-JX:0
 ```
 ### 주의!
+
 ### 시작
+PYTHONPATH를 export합니다.
 ```
 export PYTHONPATH=/path/to/hykom/src
 ```
+training을 시작합니다.
 ```
 python train.py -i corpus
 ``` 
-## 사전 
+## Users 사전 
+`/rsc`에 있는`preanal.manual`파일 에서 필요한 항목을 아래 형식으로 입력하면 users 사전을 만듭니다.
 ```
 복지택시	복지택시/NNG
 로그인	로그인/NNG
@@ -171,3 +179,4 @@ python train.py -i corpus
 가즈아	가/VV + 즈아/EC
 ```
 ## RESTful API
+gunicorn기반의 RESTful api도 만들었습니다. inference_gunicorn.py 확인하면 원하는 항목의 (명사/명사 + 동사 등..) 추출이 가능합니다.
