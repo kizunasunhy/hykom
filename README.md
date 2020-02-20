@@ -190,7 +190,7 @@ We highly recommend using NVIDIA's Automatic Mixed Precision (AMP) for accelerat
 https://github.com/NVIDIA/apex
 Install the apex first and then turn on the "-fp16" option.
 ## Users Dictionary
-Add necessary items to preanal.manual unber ./rsc directory to make your own users dictionary.
+Add necessary items to preanal.manual uner ./rsc directory to make your own users dictionary.
 It has the follow format:
 ```
 복지택시	복지택시/NNG
